@@ -129,7 +129,7 @@ const Services = () => {
             transition={{ duration: 1 }}
           >
             <span className="text-[10px] font-mono font-bold tracking-[0.8em] text-clinical-accent uppercase block mb-12">The Capability Stack</span>
-            <h1 className="text-[10vw] font-display font-black text-black leading-[0.85] tracking-tighter mb-12">PRECISION<br/><span className="text-black/10 outline-text-dark">DIAGNOSTICS</span></h1>
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[10vw] font-display font-black text-black leading-[0.85] tracking-tighter mb-12">PRECISION<br/><span className="text-black/10 outline-text-dark">DIAGNOSTICS</span></h1>
             <p className="max-w-2xl mx-auto text-xl text-black/40 font-light leading-relaxed">
               Our radiological arsenal is calibrated for ultra-high fidelity detection. Explore the technical specifications of our primary imaging modalities.
             </p>
@@ -148,7 +148,8 @@ const Services = () => {
                    </div>
                    <div className="p-16 flex-grow flex flex-col justify-between">
                       <div>
-                        <h3 className="text-4xl font-display font-black text-black leading-[0.9] tracking-tighter mb-8 group-hover:text-clinical-accent transition-colors">{s.name.toUpperCase()}</h3>
+                        {s.nameAmharic && <span className="text-[10px] font-mono font-bold text-clinical-accent mb-4 block tracking-[0.4em] uppercase">{s.nameAmharic}</span>}
+                        <h3 className="text-3xl lg:text-4xl font-display font-black text-black leading-[0.9] tracking-tighter mb-8 group-hover:text-clinical-accent transition-colors">{s.name.toUpperCase()}</h3>
                         <p className="text-black/40 text-sm leading-relaxed font-light mb-12 line-clamp-3">{s.description}</p>
                       </div>
                       <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-black">

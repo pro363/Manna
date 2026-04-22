@@ -32,7 +32,7 @@ const Home = () => {
                    <div className="w-12 h-[1.5px] bg-clinical-accent" />
                    <span className="text-[10px] font-mono font-bold tracking-[0.5em] text-white/60 uppercase">Healthcare Protocol v4.0</span>
                 </div>
-                <h1 className="text-[13vw] lg:text-[9vw] font-display font-black text-white leading-[0.85] tracking-[-0.04em] mb-12">
+                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[9vw] font-display font-black text-white leading-[0.85] tracking-[-0.04em] mb-12">
                   MODERN<br/><span className="text-clinical-accent drop-shadow-[0_0_30px_rgba(16,185,129,0.2)]">CLINICAL</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed max-w-xl mb-16 border-l-2 border-clinical-accent/30 pl-8">
@@ -113,7 +113,10 @@ const Home = () => {
                     i === 0 && "md:col-span-2 md:aspect-[21/9] flex-row items-center"
                  )}>
                     <div className={cn("space-y-6", i === 0 && "max-w-md")}>
-                       <span className="text-[10px] font-mono font-bold tracking-[0.4em] text-clinical-accent uppercase">Technology 0{i+1}</span>
+                       <div className="flex items-center gap-3">
+                          <span className="text-[10px] font-mono font-bold tracking-[0.4em] text-clinical-accent uppercase">Protocol 0{i+1}</span>
+                          {s.nameAmharic && <span className="text-xs font-bold text-clinical-blue/30">{s.nameAmharic}</span>}
+                       </div>
                        <h3 className="text-3xl lg:text-4xl font-display font-black text-black leading-tight">{s.name}</h3>
                        <p className="text-black/50 text-sm leading-relaxed">{s.description}</p>
                        <Link to={`/services/${s.slug}`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-black group">
