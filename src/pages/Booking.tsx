@@ -22,8 +22,14 @@ const Booking = () => {
     time: ''
   });
 
-  const handleNext = () => setCurrentStep(prev => prev + 1);
-  const handleBack = () => setCurrentStep(prev => prev - 1);
+  const handleNext = () => {
+    setCurrentStep(prev => prev + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const handleBack = () => {
+    setCurrentStep(prev => prev - 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const isStepValid = () => {
     if (currentStep === 1) return !!formData.serviceId;

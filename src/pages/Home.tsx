@@ -32,11 +32,11 @@ const Home = () => {
                    <div className="w-12 h-[1.5px] bg-clinical-accent" />
                    <span className="text-[10px] font-mono font-bold tracking-[0.5em] text-white/60 uppercase">Healthcare Protocol v4.0</span>
                 </div>
-                <h1 className="text-[13vw] lg:text-[9.5vw] font-display font-black text-white leading-[0.85] tracking-[-0.04em] mb-12">
-                  MODERN<br/><span className="text-clinical-accent">CLINICAL</span>
+                <h1 className="text-[13vw] lg:text-[9vw] font-display font-black text-white leading-[0.85] tracking-[-0.04em] mb-12">
+                  MODERN<br/><span className="text-clinical-accent drop-shadow-[0_0_30px_rgba(16,185,129,0.2)]">CLINICAL</span>
                 </h1>
-                <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed max-w-xl mb-16 underline-offset-8 decoration-clinical-accent/30 decoration-1">
-                  Trusted diagnostic authority delivering precision healthcare through advanced imaging and compassionate medical expertise.
+                <p className="text-xl lg:text-2xl text-white/70 font-light leading-relaxed max-w-xl mb-16 border-l-2 border-clinical-accent/30 pl-8">
+                  The trusted diagnostic authority in East Africa, delivering precision healthcare through advanced digital imaging and expert clinical mastery.
                 </p>
                 <div className="flex flex-wrap gap-6">
                    <Link to="/booking" className="bg-clinical-healing text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-[13px] hover:scale-105 hover:bg-clinical-accent transition-all shadow-xl shadow-emerald-500/20">
@@ -155,19 +155,23 @@ const Home = () => {
             </div>
             
             <div className="relative">
-               <div className="aspect-[4/5] rounded-[80px] overflow-hidden border border-white/10 relative">
-                  <img src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1200" alt="Clinical Precision" className="w-full h-full object-cover opacity-60 grayscale" />
-                  <div className="absolute inset-0 bg-clinical-accent/10" />
+               <div className="aspect-[4/5] rounded-[80px] overflow-hidden border border-clinical-blue/10 relative shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200" 
+                    alt="Clinical Excellence" 
+                    className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-clinical-blue/20 to-transparent pointer-events-none" />
                </div>
                {/* Floating stat card */}
                <motion.div 
-                 whileInView={{ x: -40, opacity: 1 }}
-                 initial={{ x: 0, opacity: 0 }}
+                 whileInView={{ x: -20, opacity: 1 }}
+                 initial={{ x: 20, opacity: 0 }}
                  viewport={{ once: true }}
-                 className="absolute -left-20 bottom-20 bg-white p-12 rounded-[48px] shadow-2xl hidden lg:block"
+                 className="absolute -left-12 lg:-left-20 bottom-12 lg:bottom-20 bg-white p-8 lg:p-12 rounded-[48px] shadow-[0_32px_64px_rgba(0,0,0,0.1)] hidden md:block border border-clinical-blue/5"
                >
-                  <div className="text-[10vw] font-display font-black text-black leading-none mb-4">10+</div>
-                  <div className="text-xs font-mono font-black text-black/30 tracking-[0.3em] uppercase">Years Clinical Mastery</div>
+                  <div className="text-[8vw] lg:text-[7vw] font-display font-black text-clinical-blue leading-none mb-4">10+</div>
+                  <div className="text-[10px] font-mono font-black text-clinical-muted tracking-[0.3em] uppercase">Years Clinical Mastery</div>
                </motion.div>
             </div>
          </div>
